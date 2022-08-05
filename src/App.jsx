@@ -1,29 +1,28 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-import data from "./assets/data"
+import data from "./assets/data";
 
 function App() {
-
-  const cards = data.map(item => {
+  const cards = data.map((item) => {
     return (
-        <Card 
-            img={item.coverImg}
-            rating={item.stats.rating}
-            reviewCount={item.stats.reviewCount}
-            location={item.location}
-            title={item.title}
-            price={item.price}
-        />
-    )
-}) 
+      <Card
+        key={item.id}
+        img={item.coverImg}
+        rating={item.stats.rating}
+        reviewCount={item.stats.reviewCount}
+        location={item.location}
+        title={item.title}
+        price={item.price}
+      />
+    );
+  });
 
   return (
     <div>
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">{cards}</section>
     </div>
   );
 }
