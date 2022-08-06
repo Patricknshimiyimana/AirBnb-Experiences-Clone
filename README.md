@@ -1,2 +1,3 @@
 # AirBnb-Experiences-Clone
-AirBnb-Experiences-Clone Second project on the scrimba react course
+simple static AirBnb-Experiences-Clone with no functionality! just to practice props
+> https://airbnb-clone-props.netlify.app/
